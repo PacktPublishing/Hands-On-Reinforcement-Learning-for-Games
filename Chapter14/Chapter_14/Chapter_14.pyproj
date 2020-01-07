@@ -1,0 +1,82 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>11da1166-a985-4bc4-b8a5-738eefd68766</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>Chapter_14_I2A.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Chapter_14</Name>
+    <RootNamespace>Chapter_14</RootNamespace>
+    <InterpreterId>CondaEnv|CondaEnv|i2a</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Chapter_14_Imagination.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chapter_14_Imagine.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chapter_14_Imagine_A2C.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chapter_14_MiniPacman.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chapter_14_wo_HER.py" />
+    <Compile Include="Chapter_14_HER.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chapter_14_I2A.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chapter_14_learn.py" />
+    <Compile Include="Chapter_14_MAML_Dice.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chapter_14_MetaSGG-VPG.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="actor_critic.py" />
+    <Compile Include="deepmind.py" />
+    <Compile Include="environment_model.py" />
+    <Compile Include="minipacman.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="multiprocessing_env.py" />
+    <Compile Include="common\__init__.py" />
+    <Compile Include="policies.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|game" />
+    <InterpreterReference Include="CondaEnv|CondaEnv|i2a" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="common\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="actor_critic_regular" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

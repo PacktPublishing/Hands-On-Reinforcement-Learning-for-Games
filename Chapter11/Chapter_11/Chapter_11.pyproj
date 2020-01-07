@@ -1,0 +1,55 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>0af6fa89-ad22-4add-b269-4c4b64b6dfc5</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>Chapter_11_Unity_Rainbow.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Chapter_11</Name>
+    <RootNamespace>Chapter_11</RootNamespace>
+    <InterpreterId>CondaEnv|CondaEnv|game</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Chapter_10_Rainbow.py" />
+    <Compile Include="Chapter_11_Unity_Rainbow.py" />
+    <Compile Include="common\layers.py" />
+    <Compile Include="common\layers.py" />
+    <Compile Include="common\replay_buffer.py" />
+    <Compile Include="common\replay_buffer.py" />
+    <Compile Include="common\wrappers.py" />
+    <Compile Include="common\wrappers.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|game" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="common\" />
+    <Folder Include="common\__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="common\__pycache__\layers.cpython-36.pyc" />
+    <Content Include="common\__pycache__\replay_buffer.cpython-36.pyc" />
+    <Content Include="common\__pycache__\__init__.cpython-36.pyc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
